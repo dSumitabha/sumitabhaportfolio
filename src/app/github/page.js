@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { AiFillLock, AiOutlineLock } from "react-icons/ai";
+import { AiFillLock } from "react-icons/ai";
 import { CiUnlock } from "react-icons/ci";
 import { FaGithub } from "react-icons/fa";
 

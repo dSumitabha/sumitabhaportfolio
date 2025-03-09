@@ -18,10 +18,11 @@ export async function GET() {
     const reposData = await reposResponse.json();
 
     return NextResponse.json({
+      username : userData.login,
       avatar: userData.avatar_url,
       followers: userData.followers,
       following: userData.following,
-      repositories: reposData.map(repo => ({ name: repo.name, description: repo.description, language: repo.language, url: repo.html_url, api_url: repo.url }))
+      repositories: reposData.map(repo => ({ name: repo.name, is_private: repo.private, description: repo.description, language: repo.language, url: repo.html_url, api_url: repo.url }))
     });
   } catch (error) {
     return NextResponse.json({ error: error.message }, { status: 500 });

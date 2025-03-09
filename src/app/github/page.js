@@ -58,7 +58,7 @@ export default function Page() {
         {repositories.map(({ name, is_private, url, api_url, description, language }) => (
           <li key={name} className="p-4 border rounded-lg shadow-sm bg-gray-50 space-y-2">
             <h4 className="text-lg font-semibold text-blue-600 ">
-              <Link href={api_url} >
+              <Link href={`/github/${name}`} >
                 {name}
               </Link>
               {is_private ? (

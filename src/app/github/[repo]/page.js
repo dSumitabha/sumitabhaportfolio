@@ -48,7 +48,10 @@ export default function RepoPage() {
             className="rounded-full border-2 border-gray-300"
             />
             <div>
-            <h2 className="text-2xl font-bold">{repoData.name}
+            <h2 className="text-2xl font-bold">
+              <Link href={repoData.api_url} target="_blank">
+                {repoData.name}
+              </Link>
             {repoData.is_private ? <AiFillLock className="inline text-gray-500 ml-2" /> : <CiUnlock className="inline text-gray-500 ml-2" />}
             </h2>
             <p className="text-gray-600">{repoData.description || "No description available"}</p>

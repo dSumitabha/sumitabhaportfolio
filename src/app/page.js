@@ -24,6 +24,7 @@ export default function Home() {
         <a href="https://github.com/dSumitabha" target="_blank" className="text-blue-600 hover:underline">GitHub</a>
         <a href="https://linkedin.com/in/sdandapat" target="_blank" className="text-blue-600 hover:underline">LinkedIn</a>
       </div>
+      <a href="/github" className="mt-6 px-6 py-2 bg-blue-600 text-white text-lg font-semibold rounded-lg shadow-md hover:bg-blue-700">Cactro Github Assignment</a>
     </div>
   );
 }

@@ -1,64 +1,37 @@
-import fetch from 'node-fetch';
-import fs from 'fs';
-import path from 'path';
-
-const tokensFilePath = path.join(process.cwd(), 'spotify_tokens.json');
+import { NextResponse } from 'next/server';
+import { getSpotifyToken } from '../../../../helpers/spotifyToken'; 
 
 export async function POST(req) {
   try {
     const { trackUri } = await req.json();
 
-    if (!trackUri) {
-      return new Response(JSON.stringify({ error: 'Track URI is required.' }), {
-        status: 400,
-        headers: { 'Content-Type': 'application/json' },
-      });
+    // Get the access token from the stored file
+    const tokenData = getSpotifyToken();
+    if (!tokenData || !tokenData.access_token) {
+      return NextResponse.json({ error: 'No token available' }, { status: 401 });
     }
 
-    const tokensData = JSON.parse(fs.readFileSync(tokensFilePath, 'utf-8'));
+    const accessToken = tokenData.access_token;
 
-    if (!tokensData.access_token) {
-      return new Response(JSON.stringify({ error: 'Access token is missing.' }), {
-        status: 400,
-        headers: { 'Content-Type': 'application/json' },
-      });
-    }
-
-    const response = await fetch('https://api.spotify.com/v1/me/player/play', {
+    // Make a request to Spotify's API to play the track
+    const spotifyResponse = await fetch('https://api.spotify.com/v1/me/player/play', {
       method: 'PUT',
       headers: {
-        Authorization: `Bearer ${tokensData.access_token}`,
+        Authorization: `Bearer ${accessToken}`,
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({
-        uris: [trackUri], // The URI of the track to play
-      }),
+      body: JSON.stringify({ uris: [trackUri] }),
     });
 
-    if (!response.ok) {
-      return new Response(
-        JSON.stringify({ error: 'Failed to play the track on Spotify.' }),
-        {
-          status: 500,
-          headers: { 'Content-Type': 'application/json' },
-        }
-      );
+    if (spotifyResponse.ok) {
+      return NextResponse.json({ message: 'Track is now playing!' });
+    } else {
+      const errorData = await spotifyResponse.json();
+      console.error('Error response from Spotify:', errorData);  // Log the error from Spotify API
+      return NextResponse.json({ error: errorData }, { status: spotifyResponse.status });
     }
-
-    return new Response(
-      JSON.stringify({ message: 'Track is now playing.' }),
-      {
-        status: 200,
-        headers: { 'Content-Type': 'application/json' },
-      }
-    );
   } catch (error) {
-    return new Response(
-      JSON.stringify({ error: 'An error occurred while trying to play the track.' }),
-      {
-        status: 500,
-        headers: { 'Content-Type': 'application/json' },
-      }
-    );
+    console.error('Error playing track:', error);
+    return NextResponse.json({ error: 'An error occurred while trying to play the track' }, { status: 500 });
   }
 }

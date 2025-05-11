@@ -1,11 +1,12 @@
 "use client"
 import React, { useEffect, useState } from 'react';
+import DeviceSelector from '../components/DeviceSelector';
 import TrackList from '../components/TrackList';
-
 
 const SpotifyCactroPage = () => {
   const [tracks, setTracks] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [selectedDevice, setSelectedDevice] = useState(null); // New
 
   useEffect(() => {
     const fetchTopTracks = async () => {
@@ -27,23 +28,24 @@ const SpotifyCactroPage = () => {
     const res = await fetch('/api/spotify/play', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ trackUri }),
+      body: JSON.stringify({ trackUri, deviceId: selectedDevice }),
     });
-  
+
     const data = await res.json();
-  
+
     if (res.ok) {
       console.log('Track is playing');
     } else {
       console.error('Play error:', data);
     }
   };
-  
-  
-  
+
   return (
-    <div className="container mx-auto p-6">
+    <div className="max-w-4xl mx-auto p-6">
       <h1 className="text-3xl font-bold text-center mb-8">Your Top Tracks</h1>
+
+      <DeviceSelector onSelectDevice={setSelectedDevice} />
+
       {loading ? (
         <div className="text-center text-lg">Loading...</div>
       ) : (

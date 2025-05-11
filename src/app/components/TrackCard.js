@@ -10,7 +10,7 @@ const TrackCard = ({ track, onPlayClick }) => {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-lg overflow-hidden w-full sm:w-72 mb-6">
+    <div className="col-span-4 bg-white rounded-lg shadow-lg overflow-hidden mb-6">
       <img src={album.image} alt={album.name} className="w-full h-56 object-cover" />
       <div className="p-4">
         <h3 className="text-xl font-bold truncate">{name}</h3>

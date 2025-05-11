@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TrackCard = ({ track, onPlayClick }) => {
+const TrackCard = ({ track, isPlaying, onPlayClick }) => {
   const { name, artists, album, uri } = track;
 
   const handlePlayClick = async () => {
@@ -10,7 +10,7 @@ const TrackCard = ({ track, onPlayClick }) => {
   };
 
   return (
-    <div className="col-span-4 bg-white rounded-lg shadow-lg overflow-hidden mb-6">
+    <div className={`col-span-4 bg-white rounded-lg shadow-lg overflow-hidden mb-6 ${isPlaying ? 'border-2 border-green-500' : ''}`}>
       <img src={album.image} alt={album.name} className="w-full h-56 object-cover" />
       <div className="p-4">
         <h3 className="text-xl font-bold truncate">{name}</h3>
@@ -20,6 +20,7 @@ const TrackCard = ({ track, onPlayClick }) => {
             Listen on Spotify
           </a>
         </div>
+        {isPlaying && (<p className="text-green-500 text-sm mt-1">Now Playing...</p>)}
         <button onClick={handlePlayClick} className="mt-4 bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 focus:outline-none" >
           Play
         </button>

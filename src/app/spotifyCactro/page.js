@@ -6,7 +6,8 @@ import TrackList from '../components/TrackList';
 const SpotifyCactroPage = () => {
   const [tracks, setTracks] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [selectedDevice, setSelectedDevice] = useState(null); // New
+  const [selectedDevice, setSelectedDevice] = useState(null);
+  const [currentlyPlayingId, setCurrentlyPlayingId] = useState(null);
 
   useEffect(() => {
     const fetchTopTracks = async () => {
@@ -24,6 +25,25 @@ const SpotifyCactroPage = () => {
     fetchTopTracks();
   }, []);
 
+  useEffect(() => {
+    const fetchNowPlaying = async () => {
+      try {
+        const response = await fetch('/api/spotify/now-playing');
+        const data = await response.json();
+        if (data && data.id) {
+          console.log(data.id);
+          setCurrentlyPlayingId(data.id);
+        } else {
+          setCurrentlyPlayingId(null);
+        }
+      } catch (error) {
+        console.error('Error fetching now playing track:', error);
+      }
+    };
+
+    fetchNowPlaying();
+  }, []);
+
   const handlePlayClick = async (trackUri) => {
     const res = await fetch('/api/spotify/play', {
       method: 'POST',
@@ -35,6 +55,7 @@ const SpotifyCactroPage = () => {
 
     if (res.ok) {
       console.log('Track is playing');
+      setCurrentlyPlayingId(data.id); // Optional: update immediately
     } else {
       console.error('Play error:', data);
     }
@@ -49,7 +70,7 @@ const SpotifyCactroPage = () => {
       {loading ? (
         <div className="text-center text-lg">Loading...</div>
       ) : (
-        <TrackList tracks={tracks} onPlayClick={handlePlayClick} />
+        <TrackList tracks={tracks} onPlayClick={handlePlayClick} currentlyPlayingId={currentlyPlayingId} />
       )}
     </div>
   );

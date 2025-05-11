@@ -25,7 +25,7 @@ export default function DeviceSelector() {
       const res = await fetch('/api/spotify/transfer-playback', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ device_id: selectedDeviceId })
+        body: JSON.stringify({ deviceId: selectedDeviceId })
       });
       const result = await res.json();
       if (res.ok) {

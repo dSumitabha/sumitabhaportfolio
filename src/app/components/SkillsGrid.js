@@ -5,7 +5,7 @@ const SkillsGrid = () => {
                 <div className=" grid grid-cols-8">
                     <div className="col-span-8 lg:col-span-1"></div>
                     <div className="grid col-span-8 lg:col-span-6 grid-cols-3 grid-rows-3 gap-4">
-                        <div className="relative col-span-3 md:col-span-2 row-span-1 md:row-span-2 bg-sky-200 aspect-square bg-cover bg-no-repeat group" >
+                        <div className="relative col-span-3 md:col-span-2 row-span-1 md:row-span-2 bg-sky-200 aspect-square bg-cover bg-no-repeat group overflow-hidden" style={{backgroundImage: "url('/techStacks/next.png')"}}>
                             <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                             </div> 
                             <div className="absolute inset-0 backdrop-blur-sm opacity-0 group-hover:opacity-100 bg-white/10 rounded-lg p-4 text-white flex flex-col justify-center items-center gap-2 transition-all duration-300">
@@ -15,7 +15,7 @@ const SkillsGrid = () => {
                                 <p className="text-sm text-center w-3/4 mx-auto hidden md:block">Next JS is a javascript framework.</p>
                             </div>
                         </div>
-                        <div className="relative col-span-3 md:col-span-1 row-span-1  bg-sky-200 aspect-square bg-cover bg-no-repeat group overflow-hidden" >
+                        <div className="relative col-span-3 md:col-span-1 row-span-1  bg-sky-200 aspect-square bg-cover bg-no-repeat group overflow-hidden bg-[url(/techStacks/react.png)]"  >
                             <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                             </div>
                             <div className="absolute inset-0 backdrop-blur-sm opacity-0 group-hover:opacity-100 bg-white/10 rounded-lg p-4 text-white flex flex-col justify-center items-center gap-2 transition-all duration-300">
@@ -24,7 +24,7 @@ const SkillsGrid = () => {
                                 <p className="text-sm text-center">ReactJs is javascript library for frontend development.</p>
                             </div>
                         </div>
-                        <div className="relative col-span-3 md:col-span-1 row-span-1  bg-sky-200 aspect-square bg-cover bg-no-repeat group overflow-hidden" >
+                        <div className="relative col-span-3 md:col-span-1 row-span-1  bg-sky-200 aspect-square bg-cover bg-no-repeat group overflow-hidden bg-[url(/techStacks/laravel.png)]" >
                             <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                             </div>
                             <div className="absolute inset-0 backdrop-blur-sm opacity-0 group-hover:opacity-100 bg-white/10 rounded-lg p-4 text-white flex flex-col justify-center items-center gap-2 transition-all duration-300">
@@ -42,7 +42,7 @@ const SkillsGrid = () => {
                                 <p className="text-sm text-center">Javascript is the only scripting language for browser.</p>
                             </div>
                         </div>
-                        <div className="relative col-span-3 md:col-span-1 row-span-1  bg-sky-200 aspect-square bg-cover bg-no-repeat group overflow-hidden" >
+                        <div className="relative col-span-3 md:col-span-1 row-span-1  bg-sky-200 aspect-square bg-cover bg-no-repeat group overflow-hidden bg-[url(/techStacks/tailwindcss.png)]" >
                             <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                             </div>
                             <div className="absolute inset-0 backdrop-blur-sm opacity-0 group-hover:opacity-100 bg-white/10 rounded-lg p-4 text-white flex flex-col justify-center items-center gap-2 transition-all duration-300">
@@ -52,7 +52,7 @@ const SkillsGrid = () => {
                             </div>
                         </div>
                         
-                        <div className="relative col-span-3 md:col-span-1 row-span-1  bg-sky-200 aspect-square bg-cover bg-no-repeat group overflow-hidden" >
+                        <div className="relative col-span-3 md:col-span-1 row-span-1  bg-sky-200 aspect-square bg-cover bg-no-repeat group overflow-hidden bg-[url(/techStacks/mongoDB.png)]" >
                             <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                             </div>
                             <div className="absolute inset-0 backdrop-blur-sm opacity-0 group-hover:opacity-100 bg-white/10 rounded-lg p-4 text-white flex flex-col justify-center items-center gap-2 transition-all duration-300">

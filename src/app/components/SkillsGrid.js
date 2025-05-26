@@ -20,8 +20,8 @@ const SkillsGrid = () => {
                             </div>
                             <div className="absolute inset-0 backdrop-blur-sm opacity-0 group-hover:opacity-100 bg-white/10 rounded-lg p-4 text-white flex flex-col justify-center items-center gap-2 transition-all duration-300">
                                 <h2 className="text-xl font-semibold">ReactJS</h2>
-                                <h3 className="text-lg text-orange-50">ReactJS</h3>
-                                <p className="text-sm text-center">ReactJs is javascript library for frontend development.</p>
+                                <h3 className="text-lg text-orange-50">Frontend JavaScript Library</h3>
+                                <p className="text-sm text-center">I use React to build the frontend of nearly all my projects today. Its component-based architecture lets me create dynamic, interactive interfaces with ease. In Quitter, React powered the entire user experience — from real-time UI updates to reusable components. It continues to be my go-to tool for crafting maintainable and scalable frontend apps.</p>
                             </div>
                         </div>
                         <div className="relative col-span-3 md:col-span-1 row-span-1  bg-sky-200 aspect-square bg-cover bg-no-repeat group overflow-hidden bg-[url(/techStacks/laravel.png)]" >

@@ -29,8 +29,8 @@ const SkillsGrid = () => {
                             </div>
                             <div className="absolute inset-0 backdrop-blur-sm opacity-0 group-hover:opacity-100 bg-white/10 rounded-lg p-4 text-white flex flex-col justify-center items-center gap-2 transition-all duration-300">
                                 <h2 className="text-xl font-semibold">Laravel</h2>
-                                <h3 className="text-lg text-orange-50">Laravel</h3>
-                                <p className="text-sm text-center">Laravel is a full stack framework.</p>
+                                <h3 className="text-lg text-orange-50">PHP Web Application Framework</h3>
+                                <p className="text-sm text-center">I developed a multivendor eCommerce app using Laravel, handling user, admin, and seller roles with robust authentication and middleware. I built backend systems for order processing and product management, leveraging Laravel’s powerful MVC architecture to create a secure and scalable application.</p>
                             </div>
                         </div>
                         <div className="relative col-span-3 md:col-span-1 row-span-1  bg-sky-200 aspect-square bg-cover bg-no-repeat group overflow-hidden bg-[url(/techStacks/javascript.png)]" >
@@ -38,8 +38,8 @@ const SkillsGrid = () => {
                             </div>
                             <div className="absolute inset-0 backdrop-blur-sm opacity-0 group-hover:opacity-100 bg-white/10 rounded-lg p-4 text-white flex flex-col justify-center items-center gap-2 transition-all duration-300">
                                 <h2 className="text-xl font-semibold">Javascript</h2>
-                                <h3 className="text-lg text-orange-50">Vanilla Javascript</h3>
-                                <p className="text-sm text-center">Javascript is the only scripting language for browser.</p>
+                                <h3 className="text-lg text-orange-50">Frontend Scripting Language</h3>
+                                <p className="text-sm text-center">JavaScript is the foundation of my frontend skills. I’ve built apps like a weather API dashboard and a school management system to master advanced DOM manipulation. In my eCommerce projects, JavaScript handles user interactions smoothly, making the frontend dynamic and responsive to user actions.</p>
                             </div>
                         </div>
                         <div className="relative col-span-3 md:col-span-1 row-span-1  bg-sky-200 aspect-square bg-cover bg-no-repeat group overflow-hidden bg-[url(/techStacks/tailwindcss.png)]" >

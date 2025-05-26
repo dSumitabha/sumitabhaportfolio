@@ -47,8 +47,8 @@ const SkillsGrid = () => {
                             </div>
                             <div className="absolute inset-0 backdrop-blur-sm opacity-0 group-hover:opacity-100 bg-white/10 rounded-lg p-4 text-white flex flex-col justify-center items-center gap-2 transition-all duration-300">
                                 <h2 className="text-xl font-semibold">Tailwind</h2>
-                                <h3 className="text-lg text-orange-50">Tailwind CSS</h3>
-                                <p className="text-sm text-center">Tailwind is a utility-first CSS framework</p>
+                                <h3 className="text-lg text-orange-50">Utility-First CSS Framework</h3>
+                                <p className="text-sm text-center">I use Tailwind CSS in all my projects to build clean and responsive UIs efficiently. Its utility classes help me move fast without leaving the component structure. With my background in vanilla CSS, Tailwind feels natural and productive. It keeps styling readable, avoids context-switching, and fits perfectly into modern, component-based development.</p>
                             </div>
                         </div>
                         

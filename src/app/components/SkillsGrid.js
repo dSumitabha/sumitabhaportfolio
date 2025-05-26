@@ -56,9 +56,9 @@ const SkillsGrid = () => {
                             <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                             </div>
                             <div className="absolute inset-0 backdrop-blur-sm opacity-0 group-hover:opacity-100 bg-white/10 rounded-lg p-4 text-white flex flex-col justify-center items-center gap-2 transition-all duration-300">
-                                <h2 className="text-xl font-semibold">MongoDB</h2>
-                                <h3 className="text-lg text-orange-50">Mongoose</h3>
-                                <p className="text-sm text-center">MongoDB is a nosql database.</p>
+                                <h2 className="text-xl font-semibold">MongoDB | Mongoose</h2>
+                                <h3 className="text-lg text-orange-50">NoSQL Document Database</h3>
+                                <p className="text-sm text-center">I’ve used MongoDB as the primary database in both Quitter and SkyDrive to store flexible, schema-less data for users, posts, and files. Its document structure fits naturally with JavaScript and works seamlessly with modern backend frameworks. MongoDB’s flexibility and speed made it ideal for building scalable, real-world features across both of my projects.</p>
                             </div>
                         </div>
                     </div>

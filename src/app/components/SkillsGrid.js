@@ -9,10 +9,10 @@ const SkillsGrid = () => {
                             <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                             </div> 
                             <div className="absolute inset-0 backdrop-blur-sm opacity-0 group-hover:opacity-100 bg-white/10 rounded-lg p-4 text-white flex flex-col justify-center items-center gap-2 transition-all duration-300">
-                                <h2 className="text-xl font-semibold">NextJS as Head</h2>
-                                <h3 className="text-lg text-orange-50">NextJS as h3</h3>
-                                <p className="text-sm text-center w-[95%] md:w-3/4 mx-auto">Next JS</p>
-                                <p className="text-sm text-center w-3/4 mx-auto hidden md:block">Next JS is a javascript framework.</p>
+                                <h2 className="text-xl font-semibold">NextJS</h2>
+                                <h3 className="text-lg text-orange-50">Fullstack React Framework</h3>
+                                <p className="text-sm text-center w-[95%] md:w-3/4 mx-auto">Next.js powers both the UI and APIs of my Quitter app — a solo project that deepened my fullstack skills. Building Quitter from scratch with Next.js gave me hands-on experience with dynamic routing, API routes, and SSR. It connected frontend and backend seamlessly, and helped me truly understand the power of a fullstack React framework in real-world apps.</p>
+                                <p className="text-sm text-center w-3/4 mx-auto hidden md:block">Beyond Quitter, I also built SkyDrive, a cloud storage web app inspired by Google Drive, entirely with Next.js. This project challenged me to implement features like file uploads, user authentication, and folder structures — all while maintaining performance and responsiveness. I used Next.js API routes to handle uploads and user sessions, and leveraged its file-based routing to structure the dashboard and file explorer. Building SkyDrive gave me practical experience scaling a feature-rich fullstack app, and deepened my appreciation for how Next.js simplifies complex architecture while keeping development fast and enjoyable.</p>
                             </div>
                         </div>
                         <div className="relative col-span-3 md:col-span-1 row-span-1  bg-sky-200 aspect-square bg-cover bg-no-repeat group overflow-hidden bg-[url(/techStacks/react.png)]"  >

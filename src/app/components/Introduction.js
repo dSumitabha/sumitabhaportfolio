@@ -3,13 +3,16 @@ import Image from "next/image";
 const Introduction = () => {
     return(
         <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 dark:bg-slate-950 p-6 font-serif overflow-hidden">
-            <Image
-            src="https://avatars.githubusercontent.com/u/150615915?v=4"
-            alt="Sumitabha Dandapat"
-            width={120}
-            height={120}
-            className="rounded-full shadow-md border-4 border-white relative before:absolute -before:left-20 before:top-32 before:w-4 before:h-screen before:bg-gray-200 dark:before:bg-gray-800"
-            />
+            <div className="relative before:absolute before:-top-18 before:-left-40 before:w-px before:h-[200vh] before:bg-gray-200 dark:before:bg-gray-800 before:-rotate-45 before:origin-top after:absolute after:-top-20 after:right-28 after:w-px after:h-[200vh] after:bg-gray-200 dark:after:bg-gray-800 after:-rotate-45 after:origin-top">
+                <Image
+                    src="https://avatars.githubusercontent.com/u/150615915?v=4"
+                    alt="Sumitabha Dandapat"
+                    width={120}
+                    height={120}
+                    className="rounded-full shadow-md border-4 border-white mb-4"
+                />
+            </div>
+
             <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold mt-4 mb-8 relative text-center text-gray-800 dark:text-slate-200
             before:absolute before:-top-4 before:left-1/2 before:w-screen before:h-px before:bg-gray-200 dark:before:bg-gray-800 before:-translate-x-1/2
             after:absolute after:-bottom-4 after:left-1/2 after:w-screen after:h-px after:bg-gray-200 dark:after:bg-gray-800 after:-translate-x-1/2

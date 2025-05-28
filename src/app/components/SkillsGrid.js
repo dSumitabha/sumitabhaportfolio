@@ -1,14 +1,14 @@
 const SkillsGrid = () => {
     return (
         <>
-            <section className="my-4 p-4" id="pandavas">
+            <section className="py-12 px-4 bg-gray-100 dark:bg-slate-950 overflow-hidden border-t border-gray-800" id="pandavas">
                 <div className=" grid grid-cols-8">
                     <div className="col-span-8 lg:col-span-1"></div>
                     <div className="grid col-span-8 lg:col-span-6 grid-cols-3 grid-rows-3 gap-4">
-                        <div className="relative col-span-3 md:col-span-2 row-span-1 md:row-span-2 bg-sky-200 aspect-square bg-cover bg-no-repeat group overflow-hidden" style={{backgroundImage: "url('/techStacks/next.png')"}}>
+                        <div className="relative col-span-3 md:col-span-2 row-span-1 md:row-span-2 bg-sky-200 aspect-square bg-cover bg-no-repeat group " style={{backgroundImage: "url('/techStacks/next.png')"}}>
                             <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                             </div> 
-                            <div className="absolute inset-0 backdrop-blur-sm opacity-0 group-hover:opacity-100 bg-white/10 rounded-lg p-4 text-white flex flex-col justify-center items-center gap-2 transition-all duration-300">
+                            <div className="absolute inset-0 backdrop-blur-sm opacity-0 overflow-hidden group-hover:opacity-100 bg-white/10 rounded-lg p-4 text-white flex flex-col justify-center items-center gap-2 transition-all duration-300">
                                 <h2 className="text-xl font-semibold">NextJS</h2>
                                 <h3 className="text-lg text-orange-50">Fullstack React Framework</h3>
                                 <p className="text-sm text-center w-[95%] md:w-3/4 mx-auto">Next.js powers both the UI and APIs of my Quitter app — a solo project that deepened my fullstack skills. Building Quitter from scratch with Next.js gave me hands-on experience with dynamic routing, API routes, and SSR. It connected frontend and backend seamlessly, and helped me truly understand the power of a fullstack React framework in real-world apps.</p>

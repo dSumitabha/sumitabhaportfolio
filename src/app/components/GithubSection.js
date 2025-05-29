@@ -81,7 +81,7 @@ export default function GitHubSection() {
                 </div>
               ))
             : repos.map((repo) => (
-                <div key={repo.id} className="p-5 aspect-[1.67] flex flex-col justify-between rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 transition hover:shadow-md">
+                <div key={repo.id} className={`p-5 aspect-[1.67] flex flex-col justify-between rounded transition hover:shadow-md bg-gray-50 dark:bg-gray-900 border ${ repo.homepage ? 'border-green-600 dark:border-green-400 ' : 'border-gray-200 dark:border-gray-800'}`}>
                   <h4 className="text-lg font-semibold">{repo.name}</h4>
                   <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 mb-3">{repo.description || "No description provided."}</p>
                   <div className="text-xs text-gray-500 flex justify-between items-center float-bottom">

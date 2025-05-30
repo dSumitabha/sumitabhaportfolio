@@ -1,5 +1,6 @@
 "use client"
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { FaGithub, FaMapMarkerAlt } from "react-icons/fa";
 
 const hardcodedRepos = ["quitter", "sumitabhaportfolio", "skyDrive","instaclone", "slack-clone", "clock"];
@@ -81,7 +82,10 @@ export default function GitHubSection() {
                 </div>
               ))
             : repos.map((repo) => (
-                <div key={repo.id} className={`p-5 aspect-[1.67] flex flex-col justify-between rounded transition hover:shadow-md bg-gray-50 dark:bg-gray-900 border ${ repo.homepage ? 'border-green-600 dark:border-green-400 ' : 'border-gray-200 dark:border-gray-800'}`}>
+                <div key={repo.id} className={`p-5 aspect-[1.67] flex flex-col justify-between rounded relative transition hover:shadow-md hover:-top-1 transition duration-700 ease-in-out bg-gray-50 dark:bg-gray-900 border ${ repo.homepage ? 'border-green-600 dark:border-green-400 ' : 'border-gray-200 dark:border-gray-800'}`}>
+                  {repo.homepage && (
+                    <a href={repo.homepage} target="_blank" rel="noreferrer" className="absolute top-4 right-4 px-2 py-1 bg-green-600 text-white rounded-full text-xs animate-pulse">Live</a>
+                  )}
                   <h4 className="text-lg font-semibold">{repo.name}</h4>
                   <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 mb-3">{repo.description || "No description provided."}</p>
                   <div className="text-xs text-gray-500 flex justify-between items-center float-bottom">

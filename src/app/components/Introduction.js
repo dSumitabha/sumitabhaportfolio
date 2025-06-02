@@ -25,7 +25,7 @@ const Introduction = () => {
                     <li><strong>AI-Powered Twitter-Style Feed:</strong> Built using Next.js and Gemini Flash LLM, implementing dynamic post generation and lazy loading.</li>
                     <li><strong>Multi-Vendor eCommerce Platform:</strong> Developed with Laravel and MySQL, featuring a responsive frontend with Tailwind CSS.</li>
                     <li><strong>Real Estate Application:</strong> Created with React and Next.js, leveraging modern UI/UX principles and multi-page navigation.</li>
-                    <li><strong>eCommerce Platform:</strong> Built using Laravel and MySQL, focusing on seamless product management, user authentication, and order processing.</li>
+                    <li><strong>skyDrive:</strong> Next.js-based cloud drive app with JWT auth, nested folders, file upload/download, and real-time UX.</li>
                 </ul>
                 <div className="mt-4 flex justify-center gap-4 text-center">
                     <a href="https://github.com/dSumitabha" target="_blank" className="text-blue-600 hover:underline">GitHub</a>
